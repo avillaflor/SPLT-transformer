@@ -1,3 +1,7 @@
+# SPLT-transformer
+Public implementation of SPLT Transformer and code needed to run evaluations in our Toy Car environment, our Modified NoCrash environment, and D4RL.
+
+
 ## Installation
 
 All python dependencies are in [`environment.yml`](environment.yml). Install with:
@@ -69,3 +73,5 @@ Heavily based off of Trajectory Transformer [TT](https://github.com/JannerM/traj
 IQL implementation based off of [rlkit](https://github.com/rail-berkeley/rlkit) repo.
 
 DT implementation based off of Decision Transformer [DT](https://github.com/kzl/decision-transformer) repo.
+
+Testing environments are based on the [CARLA](https://carla.org/) [NoCrash](https://github.com/carla-simulator/driving-benchmarks) benchmark and [D4RL](https://github.com/rail-berkeley/d4rl).
