@@ -13,7 +13,7 @@ import math
 
 from src.envs.nocrash.environment.carla_interfaces.agents.navigation.agent import Agent, AgentState
 from src.envs.nocrash.environment.carla_interfaces.agents.tools.misc import get_speed
-from src.envs.nocrash.environment.carla_interfaces.agents.navigation.behavior_types import Cautious, Aggressive, Normal, Random, NewAggressive, NewCautious, SuperAggressive
+from src.envs.nocrash.environment.carla_interfaces.agents.navigation.behavior_types import Cautious, Aggressive, Normal, Random, NewAggressive, NewCautious, SuperAggressive, UltraAggressive
 
 
 class CustomAgent(Agent):
@@ -60,6 +60,9 @@ class CustomAgent(Agent):
 
         elif behavior == 'super_aggressive':
             self._behavior = SuperAggressive()
+
+        elif behavior == 'ultra_aggressive':
+            self._behavior = UltraAggressive()
 
     def is_vehicle_hazard(self, vehicle_list, next_waypoints=None):
         """
@@ -157,7 +160,6 @@ class CustomAgent(Agent):
             target_speed = 0.
         elif self._behavior.safety_time > ttc > 0.0:
             target_speed = min([
-                #  max([vehicle_speed - self._behavior.speed_decrease, 0.]),
                 max([ego_speed - self._behavior.speed_decrease, 0.]),
                 self._behavior.max_speed,
                 speed_limit - self._behavior.speed_lim_dist])

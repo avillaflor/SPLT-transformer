@@ -4,7 +4,7 @@ from tqdm import tqdm
 import numpy as np
 
 
-from src.datasets.d4rl import load_environment
+from src.data.d4rl import load_environment
 from src.policies.splt_bt_policy import SPLTBTPolicy
 import src.utils as utils
 

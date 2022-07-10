@@ -3,7 +3,7 @@ import torch
 
 from src.utils.arrays import to_torch
 import src.utils as utils
-from src.datasets.trajectory import TrajectoryDataset
+from src.data.trajectory import TrajectoryDataset
 from src.models.bundled_transformer import BundledTransformerGPT
 from src.models.gpt import FullBlock
 from src.splt_models.splt_transformer import SPLTTransformerGPT

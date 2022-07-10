@@ -85,7 +85,7 @@ def main(args):
     )
     config.server_fps = args.fps
 
-    with CarlaEnv(config=config, num_agents=args.num_agents, log_dir="output/nocrash", behavior=args.behavior) as env:
+    with CarlaEnv(config=config, num_agents=args.num_agents, behavior=args.behavior) as env:
         # Create the policy
         policy = AutopilotNoisePolicy(env, steer_noise_std=1.e-2, speed_noise_std=1.e-2, clip=True)
 

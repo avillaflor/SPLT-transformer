@@ -20,7 +20,7 @@ config.populate_config(
     action_config=MergedSpeedTanhConfig(),
     reward_config=SpeedRewardConfig(),
     scenario_config=NoCrashDenseTown02Config(fps=5),
-    carla_gpu=1,
+    carla_gpu=0,
     testing=True,
 )
 num_agents = 1

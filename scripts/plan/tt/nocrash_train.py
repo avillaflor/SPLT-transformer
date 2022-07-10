@@ -3,7 +3,7 @@ import numpy as np
 import torch
 
 import src.utils as utils
-from src.datasets.sequence import DiscretizedDataset
+from src.data.sequence import DiscretizedDataset
 from src.models.trajectory_transformer import TrajectoryTransformerGPT
 
 

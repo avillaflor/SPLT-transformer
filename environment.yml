@@ -2,7 +2,6 @@ name: splt_transformer
 channels:
   - defaults
 dependencies:
-# - python=3.6.5
 - python=3.7
 - pip>=18.0
 - conda>=4.5.9
@@ -15,10 +14,6 @@ dependencies:
     - torch==1.10.2+cu113
     - typed-argument-parser
     - py-trees==0.8.3
-    # uncomment out the bottom 2 lines if you want to run d4rl experiments
-    # but you will have to install mujoco
-    # - git+https://github.com/JannerM/d4rl.git@d5719e2c6ef6ab3b1c678a846c02621abb8074a4
-    # - mujoco-py==2.0.2.13
     - git+https://github.com/rail-berkeley/d4rl@master#egg=d4rl
     - gitpython
     - pyproj==3.0.1

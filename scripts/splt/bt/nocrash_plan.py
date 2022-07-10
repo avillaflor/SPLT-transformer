@@ -85,6 +85,7 @@ policy = SPLTBTPolicy(
     bs=num_agents,
     max_history=max_history,
     device=args.device,
+    agg='max',
     )
 
 try:

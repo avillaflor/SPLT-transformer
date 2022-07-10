@@ -40,7 +40,8 @@ class Random(object):
     def __init__(self):
         self.min_behavior = Cautious()
         #  self.max_behavior = Aggressive()
-        self.max_behavior = SuperAggressive()
+        #  self.max_behavior = SuperAggressive()
+        self.max_behavior = UltraAggressive()
 
         self.max_speed = np.random.uniform(self.min_behavior.max_speed, self.max_behavior.max_speed)
         self.speed_lim_dist = np.random.uniform(self.min_behavior.speed_lim_dist, self.max_behavior.speed_lim_dist)
@@ -67,8 +68,17 @@ class SuperAggressive(object):
     braking_distance = 1
 
 
-class NewCautious(object):
+class UltraAggressive(object):
     """Class for Aggressive agent."""
+    max_speed = 80
+    speed_lim_dist = -5
+    speed_decrease = 1
+    safety_time = 0
+    braking_distance = 0
+
+
+class NewCautious(object):
+    """Class for Cautious agent."""
     max_speed = 40
     speed_lim_dist = 20
     speed_decrease = 20
